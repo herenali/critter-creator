@@ -1,0 +1,185 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --canvas-size: 300px;
+    --button-size-small: 40px;
+    --button-size-medium: 50px;
+    --button-size-large: 75px;
+    --button-size-extra-large: 100px;
+    --margin-size-large: 10px;
+    --margin-size-small: 5px;
+    --pearl-white: #e8e8e8;
+    --beige: #dbb288;
+    --light-brown: #be884f;
+    --brown: #7f5735;
+    --dark-brown: #5d3719;
+}
+
+body {
+    margin: 0;
+}
+
+#loader {
+    padding-top: 100px;
+}
+
+.loader > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    width: var(--canvas-size);
+    padding-top: 5px;
+}
+
+/* Create avatar */
+.screen {
+    margin: auto;
+    width: var(--canvas-size);
+}
+
+#canvas {
+    margin: auto;
+    width: var(--canvas-size);
+    height: var(--canvas-size);
+    display: flex;
+}
+
+/* Shift elements on the canvas downwards by 15px */
+#canvas div:not(#background, #clearSubmitButtons) {
+    padding-top: 15px;    
+}
+
+.canvas img:not(#clearButton img, #submitButton img) {
+    width: var(--canvas-size);
+    height: var(--canvas-size);
+    position: absolute;
+}
+
+#clearSubmitButtons {
+    width: var(--canvas-size);
+    position: absolute;
+    top: calc(var(--canvas-size) - var(--button-size-large));
+    padding-top: 45px;
+    /* TODO: fix padding */
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    margin: var(--margin-size-large);
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.color {
+    width: var(--button-size-small);
+    height: var(--button-size-small);
+    border-radius: 50%;
+    background-image: url("src/colors/button_border.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+
+#clearSubmitButtons > button > img, 
+#parts > button > img {
+    width: var(--button-size-medium);
+    height: var(--button-size-medium);
+}
+
+#options > button > img {
+    width: var(--button-size-large);
+    height: var(--button-size-large);
+}
+
+#parts, #colors, #options, #downloadPhotoButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#colors, #options {
+    justify-content: flex-start;
+}
+
+#parts > button,
+#options > button {
+    margin: 0;
+    padding: 0;
+}
+
+#color-1 {
+    background-color: var(--pearl-white);
+}
+
+#color-2 {
+    background-color: var(--beige);
+}
+
+#color-3 {
+    background-color: var(--light-brown);
+}
+
+#color-4 {
+    background-color: var(--brown);
+}
+
+#color-5 {
+    background-color: var(--dark-brown);
+}
+
+#options > button {
+    background-image: url("src/icons/option-border.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+/* Scrollbar for parts and colors */
+#parts, #colors {
+    flex-wrap: nowrap;
+    overflow: scroll hidden;
+    white-space: nowrap;
+}
+
+#parts > button,
+#colors > button {
+    flex-shrink: 0;
+}
+
+.simplebar-track {
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+}
+
+/* Download photo */
+.download-photo {
+    display: none;
+    margin: auto;
+    width: var(--canvas-size);
+}
+
+#loader > img,
+#downloadPhotoButtons > button > img {
+    height: var(--button-size-medium);
+}
+
+/* Hide and show */
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

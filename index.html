@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <title>Critter Creator</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+</head>
+<body>
+    <div class="screen">
+        <img src="src/misc/logo.png" id="logo">
+    </div>
+    <div class="screen loader" id="loader">
+        <img src="src/misc/loader.png">
+    </div>
+    <div class="screen hide" id="createAvatar">  
+        <div class="canvas" id="canvas">
+            <div id="background" data-cell>
+                <img src="src/canvas/background-color-2.png">  
+                <img src="src/canvas/background-pattern-1.png">   
+            </div>
+            <div id="body" data-cell>
+                <img src="src/canvas/body-1-1.png">
+                <img src="src/canvas/body-1.png">
+            </div>
+            <div id="ears" data-cell>
+                <img src="src/canvas/ears-1-1.png">
+                <img src="src/canvas/ears-1.png">
+            </div>
+            <div id="eyes" data-cell>
+                <img src="src/canvas/eyes-1.png">
+            </div>
+            <div id="snout" data-cell>
+                <img src="src/canvas/snout-4.png">
+            </div>
+            <img src="src/canvas/canvas-border.png">  
+            <div id="clearSubmitButtons">
+                <button id="clearButton">
+                    <img src="src/misc/clear-button.png" alt="clear">
+                </button>
+                <button id="submitButton">
+                    <img src="src/misc/submit-button.png" alt="submit">
+                </button>
+            </div>
+        </div>
+        <div class="parts" id="parts">
+            <button id="bodyButton">
+                <img src="src/misc/parts-1.png">  
+            </button>
+            <button id="earsButton">
+                <img src="src/misc/parts-2.png">  
+            </button>
+            <button id="eyesButton">
+                <img src="src/misc/parts-3.png">  
+            </button>
+            <button id="snoutButton">
+                <img src="src/misc/parts-4.png">  
+            </button>
+            <button id="backgroundButton">
+                <img src="src/misc/parts-5.png">  
+            </button>
+        </div>
+        <div class="colors" id="colors">
+            <button class="color" id="color-1"></button>
+            <button class="color" id="color-2"></button>
+            <button class="color" id="color-3"></button>
+            <button class="color" id="color-4"></button>
+            <button class="color" id="color-5"></button>
+        </div>
+        <div class="options" id="options">
+            <button class="option" id="option-1">
+                <img src="src/icons/body-icon-1.png">
+            </button>
+        </div>
+    </div>
+    <div class="screen hide" id="downloadPhoto">
+        <canvas class="canvas" id="photo" width="300px" height="300px"></canvas>
+        <div id="downloadPhotoButtons">
+            <button id="downloadButton">
+                <img src="src/misc/download-button .png" alt="Download">
+            </button>
+            <button id="backButton">
+                <img src="src/misc/back-button.png" alt="Back">
+            </button>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</body>
+</html>
